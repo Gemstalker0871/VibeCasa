@@ -92,7 +92,7 @@ export default function Home() {
               </div>
               <div className="card-body">
                 <div>
-                  <h3>Project Mankhattan</h3>
+                  <h3>Project Manhattan</h3>
                   <div className="meta">
                     <Clock size={12} />{" "}
                     <span>{new Date("01.01.2027").toLocaleDateString()}</span>
