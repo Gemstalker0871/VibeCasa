@@ -79,9 +79,18 @@ export default function App() {
   }, []);
 
   const signIn = async () => {
-    await puterSignIn();
-    return await refreshAuth();
+    console.log("SIGN IN CALLED");
+
+    try {
+      const res = await puterSignIn(); // ✅ define res here
+      console.log("PUTER RESPONSE:", res);
+
+      return await refreshAuth();
+    } catch (error) {
+      console.error("SIGN IN ERROR:", error);
+    }
   };
+
   const signOut = async () => {
     puterSignOut();
     return await refreshAuth();
