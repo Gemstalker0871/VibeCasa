@@ -93,12 +93,12 @@ export default function Home() {
             <div className="pulse"></div>
           </div>
 
-          <p>Introducting VibeCasa 2.0</p>
+          <p>Introducing VibeCasa 2.0</p>
         </div>
-        <h1>Build beautiful spaces at the speed of toight with VibaCasa</h1>
+        <h1>Build beautiful spaces at the speed of light with VibeCasa</h1>
         <p className="subtitle">
-          VibeCasa is an AI first design enviorment that helps you visualise,
-          render and ship architectural projects faster than even
+          VibeCasa is an AI first design environment that helps you visualise,
+          render and ship architectural projects faster than ever
         </p>
 
         <div className="actions">
@@ -119,7 +119,7 @@ export default function Home() {
                 <Layers className="icon" />
               </div>
               <h3>Upload your floor plan</h3>
-              <p>Supports JPG, PNG, formats up to 10MB</p>
+              <p>Supports JPG, PNG, WBDP formats upto 50MB</p>
             </div>
             <Upload onComplete={handleUploadComplete} />
           </div>
