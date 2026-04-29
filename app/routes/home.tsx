@@ -14,8 +14,12 @@ import {
 
 export function meta({}: Route.MetaArgs) {
   return [
-    { title: "New React Router App" },
-    { name: "description", content: "Welcome to React Router!" },
+    { title: "VibeCasa" },
+    {
+      name: "description",
+      content:
+        "Upload floor plans and use AI to generate stunning 3D top-down room visualizations.",
+    },
   ];
 }
 
