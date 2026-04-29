@@ -29,11 +29,22 @@ export const links: Route.LinksFunction = () => [
     href: "https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap",
   },
 ];
+export const meta: Route.MetaFunction = () => {
+  return [
+    { title: "VibeCasa" },
+    {
+      name: "description",
+      content:
+        "Upload floor plans and use AI to generate stunning 3D top-down room visualizations.",
+    },
+  ];
+};
 
 export function Layout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
       <head>
+        <link rel="icon" type="image/png" href="/box.png" />
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <Meta />

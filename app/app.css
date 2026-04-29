@@ -532,6 +532,20 @@
               }
             }
 
+            .delete-btn {
+              position: absolute;
+              top: 8px;
+              right: 8px;
+              background: red;
+              color: white;
+              border: none;
+              border-radius: 50%;
+              width: 24px;
+              height: 24px;
+              cursor: pointer;
+              z-index: 10;
+            }
+
             .card-body {
               @apply p-5 flex justify-between items-center bg-white border-t border-zinc-100 grow;
 
