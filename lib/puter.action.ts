@@ -164,3 +164,17 @@ export const getProjectById = async ({ id }: { id: string }) => {
     return null;
   }
 };
+
+export const deleteProject = async (id: string) => {
+  const response = await puter.workers.exec(
+    `${PUTER_WORKER_URL}api/projects/delete?id=${encodeURIComponent(id)}`,
+    { method: "DELETE" },
+  );
+
+  if (!response.ok) {
+    console.error("Delete failed:", await response.text());
+    return false;
+  }
+
+  return true;
+};

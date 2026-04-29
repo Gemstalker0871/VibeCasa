@@ -6,7 +6,11 @@ import Upload from "../../components/Upload";
 import { useNavigate } from "react-router";
 import { useEffect, useRef, useState } from "react";
 
-import { createProject, getProjects } from "../../lib/puter.action";
+import {
+  createProject,
+  getProjects,
+  deleteProject,
+} from "../../lib/puter.action";
 
 export function meta({}: Route.MetaArgs) {
   return [
@@ -137,6 +141,26 @@ export default function Home() {
                   className="project-card group"
                   onClick={() => navigate(`/visualizer/${id}`)}
                 >
+                  {/* DELETE BUTTON */}
+                  <button
+                    className="delete-btn"
+                    onClick={async (e) => {
+                      e.stopPropagation(); // 🚨 prevents card click
+
+                      const confirmDelete = confirm("Delete this project?");
+                      if (!confirmDelete) return;
+
+                      const success = await deleteProject(id);
+
+                      if (success) {
+                        setProjects((prev) => prev.filter((p) => p.id !== id));
+                      } else {
+                        alert("Failed to delete");
+                      }
+                    }}
+                  >
+                    ❌
+                  </button>
                   <div className="preview">
                     <img src={renderedImage || sourceImage} alt="project" />
 
